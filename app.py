@@ -50,15 +50,16 @@ def predict():
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
 
+
     # output = round(prediction[0], 2)
 
     print('THe prediction is' , prediction[0])
 
     ans = "converted"
     if prediction[0] == 1:
-        ans = "Not converted"
+        ans = "not_converted"
 
-    return render_template('index.html', prediction_text='Converted Status is $ {}'.format(ans))
+    return render_template('index.html', prediction_text='Converted Status is:  {}'.format(ans))
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
@@ -72,3 +73,5 @@ def predict_api():
     return jsonify(output)
 
 
+# if __name__ == "__main__":
+#     app.run(debug=True)

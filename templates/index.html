@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../static/style.css">
+
+</head>
+
+<body>
+    <div class="login">
+        <h1>Predict Salary Analysis</h1>
+
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}" method="post" class="curform">
+
+            <label for="occupation">Select occupation</label>
+            <select id="occupation" name="occupation">
+                <option value="0">administrative_staff</option>
+                <option value="1">business_owner</option>
+                <option value="2">domestic_worker</option>
+                <option value="3">executive</option>
+                <option value="4">independent_worker</option>
+                <option value="5">jobless</option>
+                <option value="6">manual_worker</option>
+                <option value="7">retired_worker</option>
+                <option value="8">service_worker</option>
+                <option value="9">student</option>
+                <option value="10">technical_specialist</option>
+                <option value="11">unidentified</option>
+            </select>
+            <input type="text" name="age" placeholder="age" required="required" />
+            <label for="education_level">Select education level:</label>
+            <select id="education_level" name="education_level">
+                <option value="0">elementary_school</option>
+                <option value="1">high_school</option>
+                <option value="2">unidentified</option>
+            </select>
+
+            <label for="marital_status">Select marital status:</label>
+            <select id="marital_status" name="marital_status">
+                <option value="0">divorced</option>
+                <option value="1">married</option>
+                <option value="2">single</option>
+            </select>
+
+            <label for="communication_channel">Select communication channel:</label>
+            <select id="communication_channel" name="communication_channel">
+                <option value="0">landline</option>
+                <option value="1">mobile</option>
+                <option value="2">unidentified</option>
+            </select>
+
+            <label for="call_month">Select call month:</label>
+            <select id="call_month" name="call_month">
+                <option value="0">April</option>
+                <option value="1">August</option>
+                <option value="2">December</option>
+                <option value="3">February</option>
+                <option value="4">January</option>
+                <option value="5">July</option>
+                <option value="6">June</option>
+                <option value="7">March</option>
+                <option value="8">May</option>
+                <option value="9">November</option>
+                <option value="10">October</option>
+                <option value="11">September</option>
+            </select>
+
+
+
+            <input type="text" name="call_day" placeholder="call day" required="required" />
+            <input type="text" name="call_duration" placeholder="call duration" required="required" />
+            <input type="text" name="call_frequency" placeholder="call frequency" required="required" />
+
+            <label for="previous_campaign_outcome">Select previous campaign outcome:</label>
+            <select id="previous_campaign_outcome" name="previous_campaign_outcome">
+                <option value="0">other_outcome</option>
+                <option value="1">successful</option>
+                <option value="2">unidentified</option>
+                <option value="3">unsuccessful</option>
+            </select>
+
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+
+        <br>
+        <br>
+        {{ prediction_text }}
+
+    </div>
+
+
+</body>
+
+</html>

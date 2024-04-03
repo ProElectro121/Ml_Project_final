@@ -71,5 +71,4 @@ def predict_api():
     output = prediction[0]
     return jsonify(output)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+

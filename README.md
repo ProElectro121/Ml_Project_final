@@ -43,4 +43,8 @@ The "conversion_status" column in the dataset indicates whether the customer was
 
 This column is crucial for evaluating the effectiveness of marketing strategies and understanding the conversion rates among different customer segments. Analyzing this column can provide insights into the success of marketing campaigns and help in optimizing future efforts to improve conversion rates.
 
-![image](https://github.com/ProElectro121/Ml_Project_final/assets/97580039/2a53ae79-c4d8-4b45-99b3-c9cc52e0e311)
+## Images
+![WhatsApp Image 2024-04-05 at 22 55 27_c643ce9c](https://github.com/ProElectro121/Ml_Project_final/assets/97580039/95ac252c-00ae-45ab-b121-027f5010cb39)
+![WhatsApp Image 2024-04-05 at 22 56 44_aa297046](https://github.com/ProElectro121/Ml_Project_final/assets/97580039/8a49b26d-591f-49a3-81ef-9ed1be640ffb)
+
+
